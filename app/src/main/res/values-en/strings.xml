@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Bank-trmaes</string>
+    <string name="iniciar_sesion_txt">Login</string>
+    <string name="dni">ID...</string>
+    <string name="user_password">Password...</string>
+    <string name="entrar_bttn">Enter</string>
+    <string name="salir_bttn">Exit</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="bienvenido_a">Welcome!\n</string>
+    <string name="icono_avatar">avatar icon</string>
+    <string name="floatingbutton">floatingButton</string>
+    <string name="posicion_global">GLOBAL POSITION</string>
+    <string name="movimientos">MOVEMENTS</string>
+    <string name="transferencias">TRANSFERS</string>
+    <string name="cambiar_contrasena">CHANGE PASSWORD</string>
+    <string name="promociones">PROMOTIONS</string>
+    <string name="cajeros">CASHIER</string>
+    <string name="salir">EXIT</string>
+    <string name="nueva_contrasena">New password...</string>
+    <string name="repetir_contrasena">Repeat password...</string>
+    <string name="cambiar_contrasena_validation">Change password</string>
+</resources>

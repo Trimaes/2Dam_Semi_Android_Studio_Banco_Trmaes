@@ -54,50 +54,60 @@
             android:layout_marginTop="32dp"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp">
-            <LinearLayout
+            <TableLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical"
                 android:gravity="center"
-                android:padding="8dp">
-                <com.google.android.material.button.MaterialButton
-                    style="@style/StyleButtons"
-                    android:layout_margin="4dp"
-                    android:text="@string/posicion_global"
-                    app:icon="@drawable/baseline_account_balance_wallet_24"/>
-                <com.google.android.material.button.MaterialButton
-                    style="@style/StyleButtons"
-                    android:layout_margin="4dp"
-                    android:text="@string/movimientos"
-                    app:icon="@drawable/baseline_receipt_24"/>
-                <com.google.android.material.button.MaterialButton
-                    style="@style/StyleButtons"
-                    android:layout_margin="4dp"
-                    android:text="@string/transferencias"
-                    app:icon="@drawable/baseline_swap_horiz_24"/>
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/cambiarContrasena"
-                    android:layout_margin="4dp"
-                    style="@style/StyleButtons"
-                    android:text="@string/cambiar_contrasena"
-                    app:icon="@drawable/baseline_password_24"/>
-                <com.google.android.material.button.MaterialButton
-                    style="@style/StyleButtons"
-                    android:layout_margin="4dp"
-                    android:text="@string/promociones"
-                    app:icon="@drawable/baseline_local_offer_24"/>
-                <com.google.android.material.button.MaterialButton
-                    style="@style/StyleButtons"
-                    android:layout_margin="4dp"
-                    android:text="@string/cajeros"
-                    app:icon="@drawable/baseline_location_pin_24"/>
+                android:padding="8dp"
+                android:stretchColumns="*">
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <com.google.android.material.button.MaterialButton
+                        style="@style/StyleButtons"
+                        android:layout_margin="4dp"
+                        android:text="@string/posicion_global"
+                        app:icon="@drawable/baseline_account_balance_wallet_24"/>
+                    <com.google.android.material.button.MaterialButton
+                        style="@style/StyleButtons"
+                        android:layout_margin="4dp"
+                        android:text="@string/movimientos"
+                        app:icon="@drawable/baseline_receipt_24"/>
+                    <com.google.android.material.button.MaterialButton
+                        style="@style/StyleButtons"
+                        android:layout_margin="4dp"
+                        android:text="@string/transferencias"
+                        app:icon="@drawable/baseline_swap_horiz_24"/>
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <com.google.android.material.button.MaterialButton
+                        style="@style/StyleButtons"
+                        android:layout_margin="4dp"
+                        android:text="@string/cambiar_contrasena"
+                        app:icon="@drawable/baseline_password_24"/>
+                    <com.google.android.material.button.MaterialButton
+                        style="@style/StyleButtons"
+                        android:layout_margin="4dp"
+                        android:text="@string/promociones"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="4dp"
+                        app:icon="@drawable/baseline_local_offer_24"/>
+                    <com.google.android.material.button.MaterialButton
+                        style="@style/StyleButtons"
+                        android:layout_margin="4dp"
+                        android:text="@string/cajeros"
+                        app:icon="@drawable/baseline_location_pin_24"/>
+                </TableRow>
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/salirMainActivity"
-                    android:layout_margin="4dp"
                     style="@style/StyleButtons"
+                    android:layout_margin="4dp"
                     android:text="@string/salir"
                     app:icon="@drawable/baseline_arrow_back_24"/>
-            </LinearLayout>
+            </TableLayout>
         </com.google.android.material.card.MaterialCardView>
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>

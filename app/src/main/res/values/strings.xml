@@ -5,7 +5,6 @@
     <string name="user_password">Contraseña...</string>
     <string name="entrar_bttn">Entrar</string>
     <string name="salir_bttn">Salir</string>
-    <string name="title_activity_login2">LoginActivity2</string>
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
     <string name="action_sign_in">Sign in or register</string>
@@ -16,4 +15,15 @@
     <string name="login_failed">"Login failed"</string>
     <string name="bienvenido_a">Bienvenido/a\n</string>
     <string name="icono_avatar">icono avatar</string>
+    <string name="floatingbutton">floatingButton</string>
+    <string name="posicion_global">POSICIÓN GLOBAL</string>
+    <string name="movimientos">MOVIMIENTOS</string>
+    <string name="transferencias">TRANSFERENCIAS</string>
+    <string name="cambiar_contrasena">CAMBIAR CONTRASEÑA</string>
+    <string name="promociones">PROMOCIONES</string>
+    <string name="cajeros">CAJEROS</string>
+    <string name="salir">SALIR</string>
+    <string name="nueva_contrasena">Nueva contrasseña...</string>
+    <string name="repetir_contrasena">Repetir contraseña...</string>
+    <string name="cambiar_contrasena_validation">Cambiar contraseña</string>
 </resources>
