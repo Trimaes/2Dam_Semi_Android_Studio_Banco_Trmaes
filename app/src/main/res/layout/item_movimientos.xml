@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="1dp"
+    android:layout_marginVertical="8dp"
+    android:padding="8dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:cardCornerRadius="8dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:background="?attr/selectableItemBackground">
+
+    <ImageView
+        android:id="@+id/ivBanco"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:src="@drawable/baseline_money_off_24"/>
+
+    <TextView
+        android:id="@+id/tvDescripcion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Texto ejemplo"
+        android:layout_marginStart="8dp"
+        app:layout_constraintTop_toTopOf="@id/ivBanco"
+        app:layout_constraintStart_toEndOf="@id/ivBanco"
+        app:layout_constraintBottom_toTopOf="@id/tvSaldoActual"/>
+
+    <TextView
+        android:id="@+id/tvSaldoActual"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        tools:text="Texto ejemplo"
+        app:layout_constraintTop_toBottomOf="@id/tvDescripcion"
+        app:layout_constraintBottom_toBottomOf="@id/ivBanco"
+        app:layout_constraintStart_toEndOf="@id/ivBanco"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

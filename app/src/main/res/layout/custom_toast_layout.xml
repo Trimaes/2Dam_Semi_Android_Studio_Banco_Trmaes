@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@drawable/toast_background"
+    android:gravity="center_vertical">
+
+    <TextView
+        android:id="@+id/toast_text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        tools:text="Texto prueba"
+        android:maxLines="5" />
+
+
+    <TextView
+        android:id="@+id/toast_text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        tools:text="Texto prueba"
+        android:maxLines="5" />
+
+
+    <TextView
+        android:id="@+id/toast_text3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        tools:text="Texto prueba"
+        android:maxLines="5" />
+
+
+    <TextView
+        android:id="@+id/toast_text4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        tools:text="Texto prueba"
+        android:maxLines="5" />
+</LinearLayout>

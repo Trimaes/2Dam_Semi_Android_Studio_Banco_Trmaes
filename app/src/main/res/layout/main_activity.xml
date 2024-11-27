@@ -14,12 +14,15 @@
         style="@style/Widget.MaterialComponents.BottomAppBar.Colored"
         app:navigationIcon="@drawable/ic_menu"
         app:navigationIconTint="@android:color/white"
+
         />
     <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/ic_bank"
         app:layout_anchor="@id/bttmBar"
-        android:backgroundTint="@color/material_dynamic_primary90"
+        android:backgroundTint="#BCE2FF"
+        style="@style/Widget.Material3.FloatingActionButton.Surface"
         />
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -26,4 +26,13 @@
     <string name="nueva_contrasena">Nueva contrasseña...</string>
     <string name="repetir_contrasena">Repetir contraseña...</string>
     <string name="cambiar_contrasena_validation">Cambiar contraseña</string>
+    <string name="elige_tu_cuenta">Elige tu cuenta:</string>
+    <string name="transferencias_titulo">Transferencias</string>
+    <string name="cuenta_propia">Cuenta propia</string>
+    <string name="cuenta_ajena">Cuenta ajena</string>
+    <string name="n_mero_de_la_cuenta_destino">Número de la cuenta destino</string>
+    <string name="cantidad">Cantidad:</string>
+    <string name="enviar_justificante">Enviar justificante</string>
+    <string name="enviar">Enviar</string>
+    <string name="cancelar">Cancelar</string>
 </resources>

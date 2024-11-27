@@ -1,7 +1,25 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Base.Theme.Bancotrmaes" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your dark theme here. -->
-        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+        <!-- Customize your light theme here. -->
+        <item name="colorPrimary">#2196F3</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+
+        <!-- Color fondo -->
+        <item name="android:windowBackground">#A62196F3</item>
+
+        <!-- Color textos -->
+        <item name="android:textColorPrimary">@color/white</item>
     </style>
+    <style name="StyleButtonsBack" parent="@style/Widget.MaterialComponents.Button">
+        <item name="iconTint">@color/white</item>
+    </style>
+    <style name="StyleButtons" parent="@style/Widget.MaterialComponents.Button">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:backgroundTint">#2196F3</item>
+        <item name="android:textColor">@color/design_default_color_surface</item>
+    </style>
+
+    <style name="Theme.Bancotrmaes" parent="Base.Theme.Bancotrmaes" />
 </resources>

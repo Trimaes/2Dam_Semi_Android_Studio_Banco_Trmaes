@@ -13,6 +13,15 @@
         android:theme="@style/Base.Theme.Bancotrmaes"
         tools:targetApi="31">
         <activity
+            android:name=".MovementsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".GlobalPositionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TransferActivity"
+            android:exported="false" />
+        <activity
             android:name=".WelcomeActivity"
             android:exported="true">
             <intent-filter>
@@ -20,7 +29,7 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-    </activity>
+        </activity>
         <activity
             android:name=".ChangePasswordActivity"
             android:exported="false" />
