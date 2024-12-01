@@ -1,17 +1,14 @@
-package com.example.banco_trmaes
+package com.example.banco_trmaes.activities
 
 import android.content.Context
-import android.content.Intent
 import android.os.Bundle
-import android.text.Editable
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.ArrayAdapter
-import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.recyclerview.widget.DividerItemDecoration
+import com.example.banco_trmaes.R
 import com.example.banco_trmaes.api.bd.MiBancoOperacional
 import com.example.banco_trmaes.api.pojo.Cliente
 import com.example.banco_trmaes.api.pojo.Cuenta
@@ -87,8 +84,6 @@ class TransferActivity : AppCompatActivity() {
             finish()
         }
 
-        val decoration = DividerItemDecoration(this, DividerItemDecoration.VERTICAL)
-        binding.spinnerCuentas.apply { decoration }
     }//OnCreate
 
     fun showCustomToast(context: Context) {

@@ -1,7 +1,7 @@
-package com.example.banco_trmaes
+package com.example.banco_trmaes.adapter
 
 import com.example.banco_trmaes.api.pojo.Cuenta
 
 interface OnClickListener {
-    fun setListener(cuenta:Cuenta)
+    fun onClick(cuenta: Cuenta)
 }

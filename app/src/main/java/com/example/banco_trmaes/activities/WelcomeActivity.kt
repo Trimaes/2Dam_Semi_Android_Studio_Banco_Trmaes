@@ -1,7 +1,6 @@
-package com.example.banco_trmaes
+package com.example.banco_trmaes.activities
 import android.content.Intent
 import android.os.Bundle
-import android.view.animation.Animation
 import androidx.appcompat.app.AppCompatActivity
 import com.example.banco_trmaes.databinding.ActivityWelcomeBinding
 

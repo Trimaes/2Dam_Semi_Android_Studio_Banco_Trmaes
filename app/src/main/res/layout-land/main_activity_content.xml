@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".MainActivity">
+    tools:context=".activities.MainActivity">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -64,16 +64,19 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
                     <com.google.android.material.button.MaterialButton
+                        android:id="@+id/buttonPosGlobal"
                         style="@style/StyleButtons"
                         android:layout_margin="4dp"
                         android:text="@string/posicion_global"
                         app:icon="@drawable/baseline_account_balance_wallet_24"/>
                     <com.google.android.material.button.MaterialButton
+                        android:id="@+id/buttonMovements"
                         style="@style/StyleButtons"
                         android:layout_margin="4dp"
                         android:text="@string/movimientos"
                         app:icon="@drawable/baseline_receipt_24"/>
                     <com.google.android.material.button.MaterialButton
+                        android:id="@+id/botonTransferencias"
                         style="@style/StyleButtons"
                         android:layout_margin="4dp"
                         android:text="@string/transferencias"
@@ -84,6 +87,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
                     <com.google.android.material.button.MaterialButton
+                        android:id="@+id/cambiarContrasena"
                         style="@style/StyleButtons"
                         android:layout_margin="4dp"
                         android:text="@string/cambiar_contrasena"

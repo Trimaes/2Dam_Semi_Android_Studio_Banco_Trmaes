@@ -1,4 +1,4 @@
-package com.example.banco_trmaes
+package com.example.banco_trmaes.activities
 
 import android.content.Intent
 import android.os.Bundle

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".activities.GlobalPositionActivity"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_weight="50"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/backButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tituloPG"
+                app:layout_constraintBottom_toBottomOf="@id/tituloPG"
+                app:icon="@drawable/baseline_arrow_back_ios_24"
+                android:background="@android:color/transparent"
+                style="@style/StyleButtonsBack"/>
+
+
+            <TextView
+                android:id="@+id/tituloPG"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Posición global"
+                android:textStyle="bold"
+                android:textSize="30sp"
+                android:textAlignment="center"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toEndOf="@id/backButton"
+                app:layout_constraintTop_toTopOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/cuentas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cuentas:"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"/>
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/accountsContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:layout="@layout/fragment_accounts"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_weight="50"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/tituloMV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Movimientos"
+            android:textStyle="bold"
+            android:textSize="30sp"
+            android:textAlignment="center"
+            android:layout_marginTop="16dp"/>
+
+        <TextView
+            android:id="@+id/movimientos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Últimos movimientos:"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"/>
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/movementsContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:layout="@layout/fragment_account_movements"/>
+    </LinearLayout>
+
+</LinearLayout>

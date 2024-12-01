@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".MainActivity">
+    tools:context=".activities.MainActivity">
     <include android:id="@+id/content" layout="@layout/main_activity_content"/>
     <com.google.android.material.bottomappbar.BottomAppBar
         android:id="@+id/bttmBar"

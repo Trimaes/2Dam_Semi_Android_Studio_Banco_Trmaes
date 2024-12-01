@@ -1,4 +1,4 @@
-package com.example.banco_trmaes
+package com.example.banco_trmaes.activities
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
         binding = MainActivityBinding.inflate(layoutInflater)
         setContentView(binding.root)
         //Recuperar cliente (Casting "as?"
-        val clienteRecuperado = intent.getSerializableExtra("Cliente") as? Cliente
+        val clienteRecuperado = intent.getSerializableExtra("Cliente") as Cliente
 
         binding.content.bienvenida.append(clienteRecuperado?.getNombre())
 

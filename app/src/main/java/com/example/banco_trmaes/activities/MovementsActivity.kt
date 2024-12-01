@@ -1,27 +1,27 @@
-package com.example.banco_trmaes
+package com.example.banco_trmaes.activities
 
-import android.content.Intent
+import android.content.Context
 import android.os.Bundle
 import android.view.View
+import android.view.View.OnClickListener
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
-import android.widget.ListAdapter
-import android.widget.Toast
-import androidx.activity.enableEdgeToEdge
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.banco_trmaes.adapter.CuentasAdapter
+import com.example.banco_trmaes.R
 import com.example.banco_trmaes.adapter.MovementsAdapter
+import com.example.banco_trmaes.adapter.OnClickMovement
 import com.example.banco_trmaes.api.bd.MiBancoOperacional
 import com.example.banco_trmaes.api.pojo.Cliente
 import com.example.banco_trmaes.api.pojo.Cuenta
 import com.example.banco_trmaes.api.pojo.Movimiento
 import com.example.banco_trmaes.databinding.ActivityMovementsBinding
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import java.text.SimpleDateFormat
 
-class MovementsActivity : AppCompatActivity() {
+class MovementsActivity : AppCompatActivity(), OnClickMovement{
 
     private lateinit var binding: ActivityMovementsBinding
     private lateinit var movementsAdapter: MovementsAdapter
@@ -66,7 +66,7 @@ class MovementsActivity : AppCompatActivity() {
                 listaMovimientos.clear()
                 listaMovimientos = mbo?.getMovimientos(listaCuentas[position]) as ArrayList<Movimiento>
 
-                movementsAdapter = MovementsAdapter(listaMovimientos)
+                movementsAdapter = MovementsAdapter(listaMovimientos, this@MovementsActivity)
 
                 binding.recyclerMovements.apply {
                     adapter = movementsAdapter
@@ -78,7 +78,7 @@ class MovementsActivity : AppCompatActivity() {
 
         }
 
-        movementsAdapter = MovementsAdapter(listaMovimientos)
+        movementsAdapter = MovementsAdapter(listaMovimientos, this)
         linearLayoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
 
         binding.recyclerMovements.apply {
@@ -90,5 +90,28 @@ class MovementsActivity : AppCompatActivity() {
         binding.backButton.setOnClickListener {
             finish()
         }
+    }
+
+    override fun onClick(movement: Movimiento) {
+        val dialogView = layoutInflater.inflate(R.layout.dialog_movement, null)
+        val formateador = SimpleDateFormat("dd/MM/yyyy")
+
+        val movId = dialogView.findViewById<TextView>(R.id.idMov)
+        movId.append(movement.getId().toString())
+        val movTipo = dialogView.findViewById<TextView>(R.id.tipoMov)
+        movTipo.append(movement.getTipo().toString())
+        val movFecha = dialogView.findViewById<TextView>(R.id.fechaMov)
+        movFecha.append(movement.getFechaOperacion()?.let { formateador.format(it) })
+        val movDesc = dialogView.findViewById<TextView>(R.id.descMov)
+        movDesc.append(movement.getDescripcion())
+
+        MaterialAlertDialogBuilder(this)
+            .setTitle("Detalles del movimiento")
+            .setView(dialogView)
+            .setPositiveButton("Aceptar") { dialog, i ->
+                dialog.cancel()
+            }
+            .setCancelable(false)
+            .show()
     }
 }
